@@ -4,7 +4,8 @@
     <option name="filePathToZoomLevelMap">
       <map>
         <entry key="..\:/AndroidProjects/Based/app/src/main/res/layout/activity_main.xml" value="0.25" />
-        <entry key="..\:/AndroidProjects/Based/app/src/main/res/layout/fragment_start.xml" value="8.0" />
+        <entry key="..\:/AndroidProjects/Based/app/src/main/res/layout/fragment_calculator.xml" value="0.22" />
+        <entry key="..\:/AndroidProjects/Based/app/src/main/res/layout/fragment_start.xml" value="0.18" />
       </map>
     </option>
   </component>
