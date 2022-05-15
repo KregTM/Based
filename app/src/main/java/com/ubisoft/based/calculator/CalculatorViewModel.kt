@@ -9,4 +9,12 @@ class CalculatorViewModel {
     fun minus(firstNumber: Int, secondNumber: Int): Int {
         return firstNumber - secondNumber
     }
+
+    fun refreshFirst(firstNumber: String) {
+
+    }
+
+    fun refreshSecond(secondNumber: String) {
+        
+    }
 }
