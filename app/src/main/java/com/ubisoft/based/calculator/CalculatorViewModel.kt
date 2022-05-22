@@ -1,20 +1,38 @@
 package com.ubisoft.based.calculator
 
 class CalculatorViewModel {
+    private var currentFirstString: String = " "
+    private var currentSecondString: String = " "
 
-    fun plus(firstNumber: Int, secondNumber: Int): Int {
-        return firstNumber + secondNumber
+
+    fun plus(): Int {
+        return currentFirstString.toInt() + currentSecondString.toInt()
     }
 
-    fun minus(firstNumber: Int, secondNumber: Int): Int {
-        return firstNumber - secondNumber
+    fun minus(): Int {
+        return currentFirstString.toInt() - currentSecondString.toInt()
     }
 
-    fun refreshFirst(firstNumber: String) {
+    fun multiply(): Int {
+        return currentFirstString.toInt() * currentSecondString.toInt()
+    }
+
+    fun divide(): Int {
+        val second = currentSecondString.toInt()
+        if (second != 0){
+            return currentFirstString.toInt() / currentSecondString.toInt()
+        } else {
+            throw Exception("Not based")
+        }
+
 
     }
 
-    fun refreshSecond(secondNumber: String) {
-        
+    fun refreshFirst(value: String) {
+        currentFirstString = value
+    }
+
+    fun refreshSecond(value: String) {
+        currentSecondString = value
     }
 }
