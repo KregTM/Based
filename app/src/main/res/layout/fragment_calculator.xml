@@ -9,9 +9,7 @@
         android:id="@+id/textView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="178dp"
         android:layout_marginTop="16dp"
-        android:layout_marginEnd="176dp"
         android:text="Базированный калькулятор"
         android:textColor="@android:color/holo_orange_dark"
         android:textSize="24sp"
@@ -23,12 +21,14 @@
         android:id="@+id/buttonPlus"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="140dp"
+        android:layout_marginTop="141dp"
         android:layout_marginEnd="16dp"
+        android:layout_marginBottom="1dp"
         android:background="#FFFFFF"
         android:text="+"
         android:textColor="@android:color/holo_orange_dark"
         android:textSize="48sp"
+        app:layout_constraintBottom_toTopOf="@+id/buttonMinus"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/secondNumberInput" />
 
@@ -37,39 +37,36 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginEnd="16dp"
-        android:layout_marginBottom="248dp"
         android:background="#FFFFFF"
         android:text="-"
         android:textColor="@android:color/holo_orange_dark"
         android:textSize="48sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent" />
+        app:layout_constraintEnd_toEndOf="parent"
+        tools:layout_editor_absoluteY="419dp" />
 
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/buttonMultiply"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginEnd="16dp"
-        android:layout_marginBottom="184dp"
         android:background="#FFFFFF"
         android:text="*"
         android:textColor="@android:color/holo_orange_dark"
         android:textSize="48sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/buttonMinus" />
 
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/buttonDivide"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginEnd="16dp"
-        android:layout_marginBottom="120dp"
         android:background="#FFFFFF"
         android:text="÷"
         android:textColor="@android:color/holo_orange_dark"
         android:textSize="48sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/buttonMultiply" />
 
     <EditText
         android:id="@+id/firstNumberInput"
@@ -93,8 +90,9 @@
         android:inputType="number"
         android:textColor="@color/black"
         android:textSize="20sp"
-        app:layout_constraintTop_toBottomOf="@+id/textView"
-        tools:layout_editor_absoluteX="87dp" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView" />
 
     <EditText
         android:id="@+id/secondNumberInput"
@@ -112,38 +110,41 @@
         android:id="@+id/textView2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="49dp"
         android:layout_marginTop="75dp"
         android:layout_marginBottom="18dp"
         android:text="Первое число"
         android:textColor="@android:color/holo_orange_dark"
         android:textSize="20sp"
         app:layout_constraintBottom_toTopOf="@+id/firstNumberInput"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/firstNumberInput"
+        app:layout_constraintStart_toStartOf="@+id/firstNumberInput"
         app:layout_constraintTop_toBottomOf="@+id/textView" />
 
     <TextView
         android:id="@+id/textView4"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginBottom="27dp"
         android:text="База"
         android:textColor="@android:color/holo_orange_dark"
         android:textSize="20sp"
-        tools:layout_editor_absoluteX="183dp"
-        tools:layout_editor_absoluteY="231dp" />
+        app:layout_constraintBottom_toTopOf="@+id/summ"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
 
     <TextView
         android:id="@+id/textView3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="75dp"
-        android:layout_marginEnd="60dp"
         android:layout_marginBottom="18dp"
         android:text="Второе число"
         android:textColor="@android:color/holo_orange_dark"
         android:textSize="20sp"
         app:layout_constraintBottom_toTopOf="@+id/secondNumberInput"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView" />
+        app:layout_constraintStart_toStartOf="@+id/secondNumberInput"
+        app:layout_constraintTop_toBottomOf="@+id/textView"
+        app:layout_constraintVertical_bias="0.0" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
