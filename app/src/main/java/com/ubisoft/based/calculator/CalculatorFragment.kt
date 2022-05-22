@@ -76,7 +76,7 @@ class CalculatorFragment: Fragment() {
         }
 
         secondNumber.addTextChangedListener { fieldValue ->
-            viewModel.refreshFirst(fieldValue.toString())
+            viewModel.refreshSecond(fieldValue.toString())
         }
     }
 }
