@@ -32,24 +32,36 @@ class CalculatorFragment: Fragment() {
 
         val buttonPlus = view.findViewById<Button>(R.id.buttonPlus)
         buttonPlus.setOnClickListener {
-            val ravno = viewModel.plus()
-            resultText.text = ravno.toString()
+            try {
+                val ravno = viewModel.plus()
+                resultText.text = ravno.toString()
+            } catch (error: Exception) {
+                resultText.text = error.message
+            }
         }
 
         val buttonMinus = view.findViewById<Button>(R.id.buttonMinus)
         buttonMinus.setOnClickListener {
-            val ravno = viewModel.minus()
-            resultText.text = ravno.toString()
+            try {
+                val ravno = viewModel.minus()
+                resultText.text = ravno.toString()
+            } catch(error: Exception) {
+                resultText.text = error.message
+            }
         }
 
         val buttonMultiply = view.findViewById<Button>(R.id.buttonMultiply)
-        buttonMinus.setOnClickListener {
-            val ravno = viewModel.multiply()
-            resultText.text = ravno.toString()
+        buttonMultiply.setOnClickListener {
+            try {
+                val ravno = viewModel.multiply()
+                resultText.text = ravno.toString()
+            } catch(error: Exception) {
+                resultText.text = error.message
+            }
         }
 
         val buttonDivide = view.findViewById<Button>(R.id.buttonDivide)
-        buttonMinus.setOnClickListener {
+        buttonDivide.setOnClickListener {
             try {
                 val ravno = viewModel.divide()
                 resultText.text = ravno.toString()
